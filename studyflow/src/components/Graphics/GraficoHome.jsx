@@ -40,34 +40,18 @@ export const GraficoHome = () => {
         </span>
       </div>
 
-      <div className="mt-6 h-[80px] w-full min-w-0">
-        <ResponsiveContainer width="100%" height="100%">
-          <BarChart
-            data={dados}
-            margin={{ top: 4, right: 0, left: 0, bottom: 0 }}
-          >
-            <Bar
-              dataKey="minutos"
-              radius={[6, 6, 0, 0]}
-              maxBarSize={48}
-              isAnimationActive={false}
-            >
-              {dados.map((dia, index) => (
-                <Cell
-                  key={dia.dia}
-                  fill={
-                    index === dados.length - 1
-                      ? "#625CF5"
-                      : "#C7D2FE"
-                  }
-                />
-              ))}
-            </Bar>
-          </BarChart>
-        </ResponsiveContainer>
-      </div>
-
-      {/* TAREFA */}
+      <div className="w-full h-[80px]">
+      <ResponsiveContainer width="100%" height="100%">
+        <BarChart data={dados}>
+          <Bar
+            dataKey="minutos"
+            radius={[6, 6, 0, 0]}
+            maxBarSize={48}
+            fill="#C7D2FE"
+          />
+        </BarChart>
+      </ResponsiveContainer>
+    </div>
       <div className="mt-4 flex items-center justify-between gap-2 border-t border-gray-100 pt-4">
         <div className="flex min-w-0 items-center gap-2">
           <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-[#625CF5]" />
