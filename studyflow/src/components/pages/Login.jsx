@@ -108,7 +108,7 @@ export const Login = () => {
         Criar uma conta gratuita
       </Link>
 
-      <p className="text-center text-black/50 mt-10">
+      <p className="text-center text-black/50 mt-5">
         Ao continuar, você concorda com os Termos de Uso e a Política de
         Privacidade.
       </p>
